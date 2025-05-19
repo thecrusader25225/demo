@@ -147,14 +147,18 @@ export default function Dashboard({ isClicked, inspections, setGuideDone, setHas
                 {inspections.map(
                     (inspection, i) => <div className="w-full flex justify-between basic p-8 my-4 text-lg ">
                         <div className="flex flex-col justify-between w-1/3 h-full">
-                            <span className="text-start flex gap-2"><p className="text-xl font-bold">Session name/id: </p>{inspection.name}</span>
-                            <p className="text-start">Date & Time: 10.03.2025 || 12:48</p>
-                            <p className="text-start">No. of inspections: 4</p>
+                            <span className="text-start flex gap-x-2 items-center "><p className="text-xl font-bold">SESSION ID: </p>{inspection.name}</span>
+                            <span className="flex gap-x-2">
+                                <p className="text-start font-bold">DATE & TIME:</p>
+                                <p> 10.03.2025 || 12:48</p>
+                            </span>
+
                             <button onClick={() => setHasOpenedInspection(true)} className="button bg-white bg-opacity-5">View Details</button>
                         </div>
-                        <div className=" h-full flex flex-col items-end">
+                        <div className=" h-full flex flex-col justify-around items-end font-bold">
                             <span className="flex items-center gap-2"><p className=" text-green-500">SAFE:</p> {statusCounts[i].SAFE}</span>
                             <span className="flex items-center gap-2"><p className=" text-orange-500">ANOMALY:</p> {statusCounts[i].ANOMALY}</span>
+                            <p className="text-start">No. of inspections: 4</p>
                         </div>
                         <div className="w-1/4 h-full pie">
                             <Charts warningCount={statusCounts[i].ANOMALY} safeCount={statusCounts[i].SAFE} />
