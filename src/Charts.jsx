@@ -2,18 +2,14 @@ import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const COLORS = {
     Safe: 'green',
-    Unsafe: 'yellow',
-    Critical: '#991b1b',
-    Warning: '#FFA500',
+    Anomaly: '#FF8C00'
 };
 
 
 export default function Charts({ safeCount, unsafeCount, warningCount, criticalCount }) {
     const data = [
         { name: 'Safe', value: safeCount },
-        { name: 'Unsafe', value: unsafeCount },
-        { name: 'Critical', value: criticalCount },
-        { name: 'Warning', value: warningCount }
+        { name: 'Anomaly', value: warningCount }
     ];
 
     return (
