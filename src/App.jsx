@@ -42,11 +42,13 @@ export default function App() {
         },
         {
           status: "ANOMALY",
-          image: "image1.jpg",
+          image: "image4.jpg",
           coords: { lat: 22.0101, lon: 80.011 },
           confidence: 96,
           ts: "12:49:40",
-          text: "Data incomplete. Verify sensor output and inspect manually."
+          text: "Data incomplete. Verify sensor output and inspect manually.",
+          reading: 818,
+          req: 800
         }
       ]
     },

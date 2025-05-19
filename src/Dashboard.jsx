@@ -12,7 +12,7 @@ import { CgClose } from "react-icons/cg";
 
 export default function Dashboard({ isClicked, inspections, setGuideDone, setHasLoaded, guideDone }) {
     const [visibleIndex, setVisibleIndex] = useState([])
-    const [selectInspection, setSelectInspection] = useState(inspections[1])
+    const [selectInspection, setSelectInspection] = useState(inspections[0])
     const [hasOpenedInspection, setHasOpenedInspection] = useState(true)
     const [statusCounts, setStatusCounts] = useState([])
     const [expand, setExpand] = useState([[false, false, false, false], [false, false, false, false]])
@@ -153,7 +153,7 @@ export default function Dashboard({ isClicked, inspections, setGuideDone, setHas
                                 <p> 10.03.2025 || 12:48</p>
                             </span>
 
-                            <button onClick={() => setHasOpenedInspection(true)} className="button bg-white bg-opacity-5">View Details</button>
+                            <button onClick={() => { setHasOpenedInspection(true); setSelectInspection(inspections[i]) }} className="button bg-white bg-opacity-5">View Details</button>
                         </div>
                         <div className=" h-full flex flex-col justify-around items-end font-bold">
                             <span className="flex items-center gap-2"><p className=" text-green-500">SAFE:</p> {statusCounts[i].SAFE}</span>
