@@ -5,9 +5,7 @@ import L from 'leaflet';
 function getPinIcon(status) {
   const imageMap = {
     SAFE: '/pin_green.png',
-    WARNING: '/pin_yellow.png',
-    UNSAFE: '/pin_orange.png',
-    CRITICAL: '/pin_red.png',
+    ANOMALY: '/pin_orange.png',
   };
 
   return new L.Icon({
@@ -24,7 +22,7 @@ export default function MiniMap({ locations }) {
 
   return (
     <div className="w-full h-full rounded-xl overflow-hidden">
-      <MapContainer center={center} zoom={locations.length == 1 ? 14 : 5} className="w-full h-full">
+      <MapContainer center={center} zoom={locations.length == 1 ? 14 : 12} className="w-full h-full">
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {locations.map((loc, i) => (
           <Marker

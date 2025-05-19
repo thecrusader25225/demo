@@ -23,6 +23,10 @@ const steps = [
   {
     target: '.expand',
     content: 'Click on it to expand the card to get full view of the AI report'
+  },
+  {
+    target: '.confidence',
+    content: 'COnfidence meter shows the confidence level of the AI model inference'
   }
   // {
   //   target: '.map-all',

@@ -96,6 +96,82 @@ export default function App() {
           text: "Expected zero reading. System is stable."
         }
       ]
+    },
+    {
+      name: "inspection_00",
+      data: [
+        {
+          status: "ANOMALY",
+          image: "image7.jpg",
+          coords: { lat: 20.0123, lon: 79.9810 },
+          confidence: 93,
+          ts: "12:50:00",
+          text: "Detected 1 broken insulator disc; recommend immediate inspection and scheduling of maintenance."
+        },
+        {
+          status: "SAFE",
+          image: "image8.jpg",
+          coords: { lat: 20.0256, lon: 79.9754 },
+          confidence: 90,
+          ts: "12:50:12",
+          text: "No anomalies found on insulators; system is functioning within safe parameters."
+        },
+        {
+          status: "ANOMALY",
+          image: "image9.jpg",
+          coords: { lat: 20.0194, lon: 79.9927 },
+          confidence: 88,
+          ts: "12:50:24",
+          text: "Multiple broken insulator discs observed; urgent field repair required to prevent energy discharge risks."
+        },
+        {
+          status: "ANOMALY",
+          image: "image10.jpg",
+          coords: { lat: 20.0081, lon: 80.0049 },
+          confidence: 96,
+          ts: "12:50:35",
+          text: "Pollution flashover on multiple insulator discs detected; safety protocol check and component testing advised."
+        },
+
+      ]
+
+    },
+    {
+      name: "inspection_01",
+      data: [
+        {
+          status: "ANOMALY",
+          image: "image11.jpg",
+          coords: { lat: 20.0315, lon: 80.0120 },
+          confidence: 85,
+          ts: "12:50:47",
+          text: "Detected 1 broken insulator disc; recommend immediate inspection and scheduling of maintenance."
+        },
+        {
+          status: "SAFE",
+          image: "image12.jpg",
+          coords: { lat: 20.0456, lon: 79.9651 },
+          confidence: 94,
+          ts: "12:50:58",
+          text: "Insulator discs appear intact and aligned; no abnormalities detected in this scan."
+        },
+        {
+          status: "ANOMALY",
+          image: "image13.jpg",
+          coords: { lat: 20.0023, lon: 79.9982 },
+          confidence: 89,
+          ts: "12:51:10",
+          text: "Detected 1 broken insulator disc; recommend immediate inspection and scheduling of maintenance."
+        },
+        {
+          status: "ANOMALY",
+          image: "image14.jpg",
+          coords: { lat: 20.0178, lon: 80.0105 },
+          confidence: 91,
+          ts: "12:51:22",
+          text: "Detected 2 broken insulator discs; recommend immediate inspection and scheduling of maintenance."
+        }
+      ]
     }
   ]);
 
@@ -105,7 +181,7 @@ export default function App() {
   const [text, setText] = useState(
     ["This is the details of an inspection where you would get information such as the AI curated image, the predicted status of the structure and a generated AI report which qualifies in method of fixes.",
       "Now click on the 'Dashboard' button itself to go back to the Dashboard",
-      <>Here, you can find all your inspections. We have your data arranged. You can dive into details of any sessions performed.  </>,
+      <>Here, you can find all your inspections. You can select to view which model's inferences you want to see. We have your data arranged. You can dive into details of any sessions performed.  </>,
       "In the future, expect us to come up with a better solution for navigation for quicker responses."
     ]
   )
