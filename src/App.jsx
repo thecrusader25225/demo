@@ -193,7 +193,7 @@ export default function App() {
         <div className="w-full h-full flex flex-col justify-center items-center gap-10">
           <span className="text-3xl flex flex-col items-center justify-between h-1/3  border-black">
             <span className="flex items-center h-1/2 gap-2 ">
-              <img className="h-full" alt="logo" src="./logo_dark.jpg" />
+              <img className="h-full" alt="logo" src="./new_logo_dark.png" />
               <p className="text-5xl font-bold ">AURAA</p>
             </span>
             <span className="h-1/2 w-full flex flex-col items-center justify-end">
