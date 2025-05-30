@@ -211,9 +211,9 @@ export default function Dashboard({ isClicked, inspections, setGuideDone, setHas
                                     <div className="w-1/3 h-full map" onClick={() => setIsMapOpened([true, r.coords.lat, r.coords.lon, r.status])}>
                                         <MiniMap locations={[{ lat: r.coords.lat, lon: r.coords.lon, status: r.status }]} />
                                     </div>
-                                    <button className=" bg-white bg-opacity-10 rounded-full p-2 expand" onClick={() => updateExpand(i, selectInspection.name)}>
+                                    {/* <button className=" bg-white bg-opacity-10 rounded-full p-2 expand" onClick={() => updateExpand(i, selectInspection.name)}>
                                         {expand[selectInspection.name[selectInspection.name.length - 1]][i] ? <BsArrowUp /> : <BsArrowDown />}
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
 
